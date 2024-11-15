@@ -1,19 +1,16 @@
 #include "Zombie.hpp"
 #include "newZombie.hpp"
 
-NewZombie::newZombie()
+
+NewZombie::NewZombie()
 {
 
 }
 
-Zombie* newZombie(std::string name)
+Zombie* NewZombie::newZombie(std::string name)
 {
-    new 
-    return *Zombie name;
-
+    Zombie* ptr = new Zombie();
+    ptr->getName(name);
+    return ptr;
 }
 
-void Zombie::randomChump( std::string name )
-{
-
-}

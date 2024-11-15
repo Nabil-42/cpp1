@@ -1,7 +1,7 @@
 #include "Zombie.hpp"
 #include "newZombie.hpp"
 
-Zombie::zombie()
+Zombie::Zombie()
 {
 
 }
@@ -18,7 +18,7 @@ std::string Zombie::setName()
 
 void Zombie::announce()
 {
-    if (nom == "Foo")
-         std::cout << nom << ":  BraiiiiiiinnnzzzZ..." << std::endl;
-   else (std::cout << "<" << nom << ">:  BraiiiiiiinnnzzzZ..." << std::endl;)
+    if (_nom == "Foo")
+         std::cout << _nom << ":  BraiiiiiiinnnzzzZ..." << std::endl;
+   else (std::cout << "<" << _nom << ">:  BraiiiiiiinnnzzzZ..." << std::endl);
 }

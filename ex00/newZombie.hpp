@@ -7,7 +7,7 @@
 class NewZombie
 {
     public:
-        newZombie();
+        NewZombie();
         Zombie* newZombie(std::string name);
         void randomChump( std::string name );
 
