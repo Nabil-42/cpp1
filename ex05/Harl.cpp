@@ -4,16 +4,20 @@ void Harl::complain(std::string level)
 {
     void (Harl::*tab_ptr[])(void) = {
     &Harl::debug,
-    &Harl::error,
     &Harl::info,
-    &Harl::warning        
+    &Harl::warning,        
+    &Harl::error      
     };
     std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR"};
 
     for (int i = 0; i < 4; ++i)
     {
         if (level == levels[i])
-            return (this->*tab_ptr[i])(), (void)0;
+            {
+                std::cout << "[ " << levels[i] << " ]" << std::endl;
+                (this->*tab_ptr[i])();
+                return;
+            }
     }
     std::cout << " Probably complaining about insignificant problems" << std::endl;
 }
